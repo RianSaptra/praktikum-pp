@@ -1,0 +1,78 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+  GDB online is an online compiler and debugger tool for C, C++, Python, PHP, Ruby, 
+  C#, OCaml, VB, Perl, Swift, Prolog, Javascript, Pascal, COBOL, HTML, CSS, JS
+  Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+int main(){
+    int tanggal[12] = {3, 8, 15, 6, 27, 19, 13, 20, 31, 22, 4, 10};
+    cout << "Tanggal " << tanggal[9];
+    
+    string hari[7] = {"Senin", "Selasa", "Rabu", "Jumat", "Sabtu", "Minggu"};
+    cout << " Hari " << hari[4] << endl;
+    
+    char namaP[] = {'k', 'a', 'i'};
+    cout << "Nama panggilan (char) : " << namaP << endl;
+    
+    string namaL = "Kai penakluk dunia";
+    cout << "Nama lengkap (string) : " << namaL << endl << endl;
+    
+    int i = 0;
+    while( i < 7){
+        cout << "Hari ke-" << (i+1) << " : " << hari[i] << endl;
+        i++;
+    }
+    cout << endl;
+    
+    int panjang = sizeof(hari[1]) / sizeof(hari[0]);
+    cout << "Panjang array hari adalah : " << panjang << endl;
+    cout << "Kai menaklukan dunia dalam" << panjang << "hari." << endl << endl;
+    
+    int jumlahhari = 7;
+    int penjualan[jumlahhari];
+    int totalpenjualan = 0;
+    float ratarata;
+    
+    cout << "Masukkan penjualan berapa porsi chiken katsu selama" << jumlahhari << "hari:" << endl;
+    for( int j = 0;j < jumlahhari; j++){
+        cout << "penjualan hari" << hari[j] << " : ";
+        cin >> penjualan[j];
+        totalpenjualan += penjualan[j];
+    }
+    
+    ratarata = (float)totalpenjualan / jumlahhari;
+    cout << "Total porsi chicken katsu yang telah terjual : " << totalpenjualan << "porsi." << endl;
+    cout << "Rata-rata penjualan chicken katsu selama" << jumlahhari << " hari adalah:" << ratarata << "porsi." << endl << endl;
+    
+    int matriks[100][100];
+    int jumlahbaris, jumlahkolom;
+    
+    cout << "Masukkan jumlah bulan dan tanggal buka kedai chicken katsu : " << endl;
+    cout << "Input jumlah bulan (baris matriks) : ";
+    cin >> jumlahbaris;
+    cout << "Input jumlah tanggal (kolom matriks) :";
+    cin >> jumlahkolom;
+    
+    for(int x = 0; x < jumlahbaris; x++){
+        for(int y = 0; y < jumlahkolom; y++){
+            cout << "Baris" << i + 1 << ", kolom" << y + 1 << "=";
+            cin >> matriks[x][y];
+        }
+    }
+    
+    cout << "Kedai chicken katsu buka selama : " << jumlahbaris << "bulan ditanggal tertentu." << endl;
+    
+    for(int x =0; x < jumlahbaris; x++){
+        for(int y = 0; y < jumlahkolom; y++){
+            cout << matriks[x][y] << " ";
+        }
+        cout << endl;
+    }
+    
+return 0;
+}
